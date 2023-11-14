@@ -1,7 +1,7 @@
 sources:
-  - referenceName: ethereum.decoded_logs
+  - type: dataset
+    referenceName: ethereum.decoded_logs
     version: 1.0.0
-    type: dataset
     startAt: latest
 
 transforms:
