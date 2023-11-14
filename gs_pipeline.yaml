@@ -21,8 +21,8 @@ transforms:
     primaryKey: id
 
 sinks:
-  - referenceName: ethereum.decoded_logs
   - type: postgres
+    referenceName: eth_logs_sink
     table: eth_logs
     schema: goldsky
     secretName: API_POSTGRES_CREDENTIALS

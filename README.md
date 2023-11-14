@@ -82,7 +82,7 @@ goldsky secret create --name <your-db-secret-name>
 goldsky pipeline create <your-pipeline-name>
 
 # Programmatically
-goldsky pipeline create <your-pipeline-name> --definition-path ./gs_pipeline.yaml
+goldsky pipeline create <your-pipeline-name> --definition-path ./gs_pipeline.yaml --status ACTIVE
 ```
 
 # Additional Resources
