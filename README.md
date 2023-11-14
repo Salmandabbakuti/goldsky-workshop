@@ -92,8 +92,9 @@ goldsky pipeline create <your-pipeline-name> --definition-path ./gs_pipeline.yam
 - [Goldsky Subgraph Docs](https://docs.goldsky.com/get-started/subgraphs)
 - [GoldSky Mirror Docs](https://docs.goldsky.com/mirror/create-a-pipeline)
 - [Mirror Pipeline Config Reference](https://docs.goldsky.com/reference/config-file/pipeline)
+- [Mirror Data Schemas Reference](https://docs.goldsky.com/reference/schema/onchain-data)
 - [Goldsky Reference](https://docs.goldsky.com/reference/cli)
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
