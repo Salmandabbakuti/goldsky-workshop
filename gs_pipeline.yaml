@@ -1,0 +1,29 @@
+sources:
+  - type: dataset
+    referenceName: ethereum.decoded_logs
+    version: 1.0.0
+    startAt: latest
+
+transforms:
+  - sql: |
+      SELECT
+          id,
+          address,
+          event_signature,
+          event_params,
+          raw_log.block_number as block_number,
+          raw_log.block_hash as block_hash,
+          raw_log.transaction_hash as transaction_hash
+      FROM
+          ethereum.decoded_logs
+    referenceName: logs
+    type: sql
+    primaryKey: id
+
+sinks:
+  - type: postgres
+    referenceName: eth_logs_sink
+    table: eth_logs
+    schema: goldsky
+    secretName: API_POSTGRES_CREDENTIALS
+    sourceStreamName: logs

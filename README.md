@@ -6,7 +6,7 @@ This workshop is designed to help you get started with deploying subgraphs on Go
 
 Goldsky is a decentralized indexing protocol for querying blockchain data offering high-performance subgraph hosting and realtime data replication pipelines. Goldsky offers two core self-serve products that can be used independently or in conjunction to power your data stack. Get live blockchain data in your database with Mirror and flexible indexing and querying with Subgraphs.
 
-## Getting Started
+## Subgraphs - Getting Started
 
 ### Prerequisites
 
@@ -61,10 +61,38 @@ goldsky subgraph deploy <name>/<version> --from-abi <path-to-config-file-not-abi
 
 ```
 
+## Mirror - Getting Started
+
+Mirror is a serverless data pipeline platform that allows you to get real-time data into your database with one .yaml definition file.
+
+### 1. Creating Database Secret
+
+```bash
+# Keep your db connection string handy, follow the prompts
+goldsky secret create --name <your-db-secret-name>
+```
+
+### 2. Creating Pipeline:
+
+1. Interactively: through guided CLI
+2. Programmatically: through a `.yaml` definition file
+
+```bash
+# Interactively, follow the prompts
+goldsky pipeline create <your-pipeline-name>
+
+# Programmatically
+goldsky pipeline create <your-pipeline-name> --definition-path ./gs_pipeline.yaml --status ACTIVE
+```
+
 # Additional Resources
 
 - [Goldsky Website](https://goldsky.com/)
 - [Goldsky Docs](https://docs.goldsky.com/get-started/subgraphs)
+- [Goldsky Subgraph Docs](https://docs.goldsky.com/get-started/subgraphs)
+- [GoldSky Mirror Docs](https://docs.goldsky.com/mirror/create-a-pipeline)
+- [Mirror Pipeline Config Reference](https://docs.goldsky.com/reference/config-file/pipeline)
+- [Goldsky Reference](https://docs.goldsky.com/reference/cli)
 
 # License
 
